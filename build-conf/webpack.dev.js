@@ -7,11 +7,13 @@ module.exports = {
   entry: `${__dirname}/../src/index.tsx`,
 
   devServer: {
-    historyApiFallback: true,
-    inline: true,
+    publicPath: '/',
     port: 3000,
     hot: true,
-    publicPath: '/',
+    open: true,
+    inline: true,
+    disableHostCheck: true,
+    historyApiFallback: true,
   },
 
   module: {
