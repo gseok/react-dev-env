@@ -1,17 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import PageLayout from "../../components/PageLayout";
 
 const NewsSports = () => {
-  return (
-    <>
-      <div>News Sports...!!</div>
-      <ul>
-        <li>
-          <Link to="/news">Go News Home</Link>
-        </li>
-      </ul>
-    </>
+  const links = (
+    <li>
+      <Link to="/news">Go News Home</Link>
+    </li>
   );
+  return <PageLayout title="Sports...!!" links={links} />;
 };
 
 export default NewsSports;

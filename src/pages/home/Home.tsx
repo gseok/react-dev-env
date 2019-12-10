@@ -1,4 +1,4 @@
-import React, { ElementType } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import PageLayout from "../../components/PageLayout";
 
@@ -9,11 +9,7 @@ const Home = () => {
     </li>
   );
 
-  return (
-    <>
-      <PageLayout title="Home...!!" links={links}></PageLayout>
-    </>
-  );
+  return <PageLayout title="Home...!!" links={links} />;
 };
 
 export default Home;

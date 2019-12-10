@@ -5,7 +5,7 @@ import NewsEconomy from '../pages/news/NewsEconomy';
 const basePath: string = '/news';
 const routes = [
   {
-    path: '/',
+    path: `${basePath}`,
     component: NewsHome
   },
   {
