@@ -3,8 +3,11 @@ const path = require('path');
 const nodeExternals = require('webpack-node-externals');
 
 module.exports = env => {
+  const isPrd = env && env.NODE_ENV === 'production';
+
   return {
-    mode: env && env.NODE_ENV === 'production' ? 'production' : 'development',
+    mode: isPrd ? 'production' : 'development',
+    devtool: isPrd ? '' : 'inline-source-map',
 
     target: 'node',
     node: {

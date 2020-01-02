@@ -2,9 +2,15 @@ import ReactDOM from "react-dom";
 import React from "react";
 
 import { BrowserRouter } from "react-router-dom";
+import { loadableReady } from '@loadable/component';
 
 import App from "./App";
 
-const rootElement = document.getElementById("root");
+loadableReady(() => {
+  const rootElement = document.getElementById("root");
+  ReactDOM.hydrate(<BrowserRouter><App /></BrowserRouter>, rootElement);
+});
 
-ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, rootElement);
+if (module.hot) {
+  module.hot.accept();
+}
