@@ -48,7 +48,7 @@ const MashupControlView = () => {
   return (
     <>
       <SearchInput
-        value={'init value test...!!!'}
+        value={'init value test...@@@@@'}
         placeholder={'placeholder test...!!!'}
         onChange={onChnageHandler}
       />

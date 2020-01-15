@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="width=device-width, user-scalable=no">
+  <meta name="description" content="React + Typescript + SSR + Code-splitting" />
+  <meta name="google" content="notranslate">
+  <link rel="shortcut icon" href="assets/favicons/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="assets/favicons/favicon.ico" type="image/x-icon">
+  <title>single lib test</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+      console.log('DOM fully loaded and parsed');
+      const Component = MySingleLibStyleComponent.default;
+      const targetId = 'root';
+      const libObj = new Component(targetId);
+      libObj.render();
+    });
+  </script>
+</body>
+
+</html>
