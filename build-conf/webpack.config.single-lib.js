@@ -8,13 +8,13 @@ module.exports = env => {
 
     entry: `${__dirname}/../src/client/index-single.tsx`,
 
-    output: [{
+    output: {
       path: path.resolve(__dirname, '../dist', 'umd'),
       library: 'MySingleLibStyleComponent',
       libraryTarget: 'umd',
       filename: 'MySingleLibStyleComponent.js',
       umdNamedDefine: true,
-    }],
+    },
 
     module: {
       rules: [
