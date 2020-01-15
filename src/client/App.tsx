@@ -1,6 +1,6 @@
 import React from "react";
-import Routers from './routes/Routes';
+import MashupControlView from './views/MashupControlView';
 
-const App = () => <Routers />;
+const App = () => <MashupControlView />;
 
 export default App;
