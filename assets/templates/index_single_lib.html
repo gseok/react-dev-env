@@ -16,7 +16,7 @@
   <script>
     window.addEventListener('DOMContentLoaded', (event) => {
       console.log('DOM fully loaded and parsed');
-      const Component = MySingleLibStyleComponent.default;
+      const Component = window.MyNamespace.MySingleLibStyleComponent;
       const targetId = 'root';
       const libObj = new Component(targetId);
       libObj.render();

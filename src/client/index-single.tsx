@@ -21,4 +21,17 @@ class MySingleLibStyleComponent {
   }
 }
 
+declare global {
+  interface Window {
+    MyNamespace: any;
+  }
+}
+
+// window에 붙이기
+if (window) {
+  window.MyNamespace = {
+    MySingleLibStyleComponent
+  };
+}
+
 export default MySingleLibStyleComponent;
