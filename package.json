@@ -14,7 +14,7 @@
     "build:prd": "yarn clear && yarn build:client && yarn build:server",
     "build:server": "webpack --config ./build-conf/webpack.config.js --env.target=ssr-server --env.NODE_ENV=production --progress --profile --colors",
     "build:client": "webpack --config ./build-conf/webpack.config.js --env.target=ssr-client --env.NODE_ENV=production --progress --profile --colors",
-    "build:single-lib": "webpack --config ./build-conf/webpack.config.single-lib.js --progress --profile --colors"
+    "build:single-lib": "rm -rf dist/umd && webpack --config ./build-conf/webpack.config.single-lib.js --progress --profile --colors"
   },
   "resolutions": {
     "react-helmet/react-side-effect": "2.1.0"
